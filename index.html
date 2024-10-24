@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    
+  }
+
+   body {
+    background-color: rgb(196, 234, 238);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+    
+     table, th, td {
+        border: 0px solid rgb(22, 45, 139);
+        
+        color: white;
+        
+        }
+
+        table {
+            max-width:200px ;
+            height:382px;
+            border-spacing: 4px;
+            background-color: #1B2735;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        th {
+          background-color: rgb(67, 12, 12);
+          height: 50px;
+          font-size: 20px;
+          background-color: white;
+          
+          color: black;
+          text-align: right;
+          padding-right: 5px;
+          
+        }
+        td {
+          background-color: #364453;
+          height: 50px;
+          width: 23px;
+          text-align: center;
+        }
+
+        
+       
+</style>
+<body>
+    <table>
+        <tr>
+          <th colspan="4">Company</th>
+        </tr>
+        
+          <tr>
+            <td >%</td>
+            <td>CE</td>
+            <td>C</td>
+            <td>Del</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>/</td>
+          
+          </tr>
+          <tr>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>X</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>00</td>
+              <td>.</td>
+              <td>-</td>
+            </tr>
+            <tr>
+          
+              <td colspan="4" style="width: 50%; position: relative; right: 0; background-color: #49DB86;">=</td>
+            </tr>
+       </table>
+</body>
+<script>
+  var table = document.querySelector('tr');
+  var resultado = document.querySelector('th');
+  resultado.textContent = ""
+
+  table.addEventListener('click', (env)=> {
+
+    
+    resultado.innerText += env.target.innerText
+    console.log(resultado.textContent.length)
+    
+  })
+
+</script>
+</html>

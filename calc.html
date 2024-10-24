@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            user-select: none;
+            
+        }
+
+        body {
+            background-color: rgb(0, 36, 40);
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        table, th, td {
+        border: 1px solid rgb(22, 45, 139);
+        border-collapse: separate;
+        border-radius: 7px;
+        cursor: pointer;
+        }
+        table {
+            border-spacing: 16px;
+            width: 300px;
+            height: 500px;
+            padding: 10px;
+            background-color: #1B2735;
+        }
+        th {
+            padding:10px 0px;
+            height: 90px;
+            border: none;
+
+        }
+
+        input {
+            height: 60px;
+            width: 100%;
+            border-radius: 4px;
+            border: none;
+            overflow-x: scroll;
+            font-size: 20pt;
+            text-align: right;
+            padding-right: 10px;
+            padding-left: 10px;
+            cursor: pointer;
+        }
+        
+        td {
+            text-align: center;
+            width: 40px;
+            background-color: #364453;
+            color: white;
+           
+            
+            
+        }
+        .operator {
+            background-color: rgb(232, 169, 81);
+        }
+        .del {
+            background-color: #e63333;
+        }
+
+        .numeros:hover {
+            background-color: #8faed0;
+            transition: .7s;
+        }
+
+        .operator:hover {
+            background-color: #94682a;
+            font-weight: bolder;
+            transition: .5s;
+            
+        }
+    </style>
+    
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="4">
+               <input readonly type="text" placeholder="0">
+            </th>
+        </tr>
+
+        <tr>
+            <td>(</td>
+            <td>)</td>
+            <td>C</td>
+            <td class="del">D</td>
+        </tr>
+
+        <tr>
+            <td class="numeros">8</td>
+            <td class="numeros">7</td>
+            <td class="numeros">9</td>
+            <td class="operator">/</td>
+          
+          </tr>
+          <tr>
+              <td class="numeros">4</td>
+              <td class="numeros">5</td>
+              <td class="numeros">6</td>
+              <td class="operator">X</td>
+            </tr>
+            <tr>
+              <td class="numeros">1</td>
+              <td class="numeros">2</td>
+              <td class="numeros">3</td>
+              <td class="operator">+</td>
+            </tr>
+            <tr>
+              <td class="numeros">0</td>
+              <td class="numeros">0</td>
+              <td>.</td>
+              <td class="operator">-</td>
+            </tr>
+            <tr>
+          
+              <td colspan="4" style="width: 50%; position: relative; right: 0; background-color: #49DB86;">=</td>
+            </tr>
+    </table>
+</body>
+
+<script>
+    let agora=0;
+    let passato=0;
+
+    
+    var diva = document.querySelectorAll('td');
+    var operador = document.querySelectorAll('.operator')
+    var input = document.querySelector('input');
+   // input.value = ;
+   console.log(input.value.length)
+    var ultimoDigito=0
+
+
+
+
+stringg = '123'
+//console.log(stringg[stringg.length-1])
+
+
+</script>
+</html>
