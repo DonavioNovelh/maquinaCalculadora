@@ -1,6 +1,8 @@
 const button = document.querySelectorAll('td');
-  const display = document.querySelector('.digitos');
-  let operadores = document.querySelectorAll('.operadores');
+var display = document.querySelector('.digitos');
+var displayBack = document.querySelector('.display');
+let operadores = document.querySelectorAll('.operadores');
+  
   let operador = [];
   
   // Preenche o array de operadores com o texto de cada elemento com a classe 'operadores'
@@ -11,11 +13,40 @@ const button = document.querySelectorAll('td');
   let primeiroDigito = 0;
   display.textContent = [];
   let ultimoDigito = 0;
+  var fontS = 0;
+  
+ 
+
+  //console.log(display1.clientWidth)
+
   
   // Adiciona evento de clique para cada botão
   button.forEach(el => { 
     el.addEventListener('click', (pp) => {
+       /* console.log('lafuent' +fontS)
+        fontS = getComputedStyle(document.querySelector('.digitos')).fontSize.replaceAll('px', '')
+        if(display.clientWidth>=240) {
+          //  if(fontS>40) {
+                fontS = fontS -2
+                fontS = parseFloat(fontS)
+                fontS = fontS + 'px'
+                console.log(display.clientWidth)
+           //     fontS = fontS
+//            } 
+
+          
+                        display.style.fontSize =fontS
+
+           }*/
+
+           
+           
+         
+    //  console.log(display.offsetWidth)
+      //  console.log("letra"+ display.width)
+      //  console.log(" back"+ displayBack.width)
         let ultimoDigito = display.textContent[display.textContent.length - 1];
+        
         
         // Verifica se o botão clicado não é o de "igual"
         if (!el.classList.contains('igual')) {
@@ -24,6 +55,7 @@ const button = document.querySelectorAll('td');
             if (display.textContent.length >= 0) {
                 // Se o botão pressionado é um número, adiciona ao display
                 if (!isNaN(el.textContent)) {
+                    display.style.color = 'yellow';
                     display.textContent += el.textContent;
                 }
 
@@ -51,20 +83,31 @@ const button = document.querySelectorAll('td');
            
 
             // Para fins de depuração, mostra o último dígito e se o botão possui a classe "operadores"
-            console.log(ultimoDigito);
-            console.log(el.classList.contains('operadores'));
+            
         }
 
-        else {
-            if(display.textContent!=0) {
-                if (ul) {
-                    display.textContent = Math.round(Math.floor(Number(eval(display.textContent))))
+        else if (el.classList.contains('igual')){
+            if(display.textContent.length!=0) {
+                if (!operador.includes(ultimoDigito)) {
+                    var d = display.textContent.replace('X', '*')
+                 
+                    display.textContent = Math.round(Math.floor(Number(eval(d))))
+                    display.style.color = '#00FFAB';
+                  
+                   
 
                 }
             }
         }
+
+        if(display.textContent.includes('X')) {
+            display.textContent=display.textContent.replaceAll('X', '*')
+            
+        }
     });
 });
+
+
 
   
   /* Código adicional comentado para futuros ajustes
@@ -85,3 +128,17 @@ const button = document.querySelectorAll('td');
       display.textContent = 0;
   }
   */
+  function resizeDisplayText() {
+    const display = document.getElementById('display-text');
+    const displayContainer = display.parentElement;
+    
+    // Reseta o scale para 1
+    display.style.transform = 'scale(1)';
+    
+    // Checa se o display excede a largura da div
+    if (display.scrollWidth > displayContainer.clientWidth) {
+      // Calcula o fator de escala
+      const scale = displayContainer.clientWidth / display.scrollWidth;
+      display.style.transform = `scale(${scale})`;
+    }
+  }
