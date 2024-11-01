@@ -23,21 +23,7 @@ let operadores = document.querySelectorAll('.operadores');
   // Adiciona evento de clique para cada botão
   button.forEach(el => { 
     el.addEventListener('click', (pp) => {
-       /* console.log('lafuent' +fontS)
-        fontS = getComputedStyle(document.querySelector('.digitos')).fontSize.replaceAll('px', '')
-        if(display.clientWidth>=240) {
-          //  if(fontS>40) {
-                fontS = fontS -2
-                fontS = parseFloat(fontS)
-                fontS = fontS + 'px'
-                console.log(display.clientWidth)
-           //     fontS = fontS
-//            } 
-
-          
-                        display.style.fontSize =fontS
-
-           }*/
+    
 
            
            
@@ -50,9 +36,10 @@ let operadores = document.querySelectorAll('.operadores');
         
         // Verifica se o botão clicado não é o de "igual"
         if (!el.classList.contains('igual')) {
-
+            if(display.textContent.length==0) display.style.fontSize='48px';
             // Verifica se o display está vazio
             if (display.textContent.length >= 0) {
+                
                 // Se o botão pressionado é um número, adiciona ao display
                 if (!isNaN(el.textContent)) {
                     display.style.color = 'yellow';

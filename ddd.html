@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link id="stylesheet1" rel="stylesheet" href="primeiro.css">
+    <link id="stylesheet2" rel="stylesheet" href="segundo.css">
     <style> 
-         body{
-            
+         body {
          }
 
          div {
@@ -22,8 +23,30 @@
     </style>
 </head>
 <body>
+    <button onclick="toggleStyles()">Trocar Estilo</button>
     <div> 
         <p>nsnsan</p>
     </div>
+
+    <script>
+        function toggleStyles() {
+            // Obtém os elementos link por ID
+            const stylesheet1 = document.getElementById("stylesheet1");
+            const stylesheet2 = document.getElementById("stylesheet2");
+
+            // Verifica qual estilo está ativo e alterna o href
+            if (stylesheet1.disabled) {
+                stylesheet1.disabled = false;
+                stylesheet2.disabled = true;
+            } else {
+                stylesheet1.disabled = true;
+                stylesheet2.disabled = false;
+            }
+        }
+
+        // Desabilita um dos estilos ao carregar a página (opcional)
+        document.getElementById("stylesheet2").disabled = true;
+    </script>
 </body>
 </html>
+
