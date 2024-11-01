@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Asar&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Asar&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @import url(variables.css);
 
@@ -56,7 +63,7 @@ position: relative;
   position: absolute;
   left: 0px;
   cursor: pointer;
-  position: absolute;
+ 
 }
 
 .bt:hover {
@@ -242,3 +249,87 @@ td:hover {
 
 
 
+
+    </style>
+     
+</head>
+
+<body>
+    <div class="caixa">
+        <div class="calc">
+          <h1>CALC</h1>
+          <div class="ladinho">
+            <h2>THEME</h2>
+            <div class="ladiii">
+              <div class="zz">
+                <span>5</span>
+                <span>10</span>
+                <span>0</span>
+              </div>
+              <div class="out">
+                <div  
+                draggable="true" class="bt"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="display">
+          <p class="digitos">XXXXXXX</p>
+<!--<p class="resultado">XXyhXXX</p>-->
+        </div>
+
+        <table style="user-select: none;">
+        
+            <tr>
+              <td class="num numeros">7</td>
+              <td class="num numeros">8</td>
+              <td class="num numeros">9</td>
+              <td class="verde"  >DEL</td>
+            </tr>
+            <tr>
+              <td class="num numeros">4</td>
+              <td class="num numeros">5</td>
+              <td class="num numeros">6</td>
+              <td class="num operadores">+</td>
+            </tr>
+
+            <tr>
+              <td class="num numeros">1</td>
+              <td class="num numeros">2</td>
+              <td class="num numeros">3</td>
+              <td class="num operadores">-</td>
+            </tr>
+
+            <tr>
+              <td class="num operadores">.</td>
+              <td class="num numeros">0</td>
+              <td class="num operadores">/</td>
+              <td class="num operadores">X</td>
+            </tr>
+            <tr>
+              <td class="verde larg" colspan="3">RESET</td>
+              <td class="igual operadores">=</td>
+            </tr>
+            
+     
+        </table>
+        
+    </div>
+</body>
+<script >
+  const button = document.querySelectorAll('td');
+var display = document.querySelector('.digitos');
+var displayBack = document.querySelector('.display');
+
+var sonZ = document.querySelector('.bt');
+  
+    sonZ.addEventListener('click', ()=> {
+    sonZ.classList.add('centro')
+
+
+
+  })
+ </script>
+  
+</html>

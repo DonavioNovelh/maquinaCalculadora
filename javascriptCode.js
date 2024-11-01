@@ -1,7 +1,16 @@
 const button = document.querySelectorAll('td');
 var display = document.querySelector('.digitos');
 var displayBack = document.querySelector('.display');
-let operadores = document.querySelectorAll('.operadores');
+
+var sonZ = document.querySelector('.bt');
+  
+    sonZ.addEventListener('click', ()=> {
+    sonZ.classList.add('centro')
+
+
+
+  })
+/*let operadores = document.querySelectorAll('.operadores');
   
   let operador = [];
   
@@ -115,17 +124,5 @@ let operadores = document.querySelectorAll('.operadores');
       display.textContent = 0;
   }
   */
-  function resizeDisplayText() {
-    const display = document.getElementById('display-text');
-    const displayContainer = display.parentElement;
-    
-    // Reseta o scale para 1
-    display.style.transform = 'scale(1)';
-    
-    // Checa se o display excede a largura da div
-    if (display.scrollWidth > displayContainer.clientWidth) {
-      // Calcula o fator de escala
-      const scale = displayContainer.clientWidth / display.scrollWidth;
-      display.style.transform = `scale(${scale})`;
-    }
-  }
+
+ 
