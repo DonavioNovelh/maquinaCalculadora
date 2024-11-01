@@ -1,0 +1,75 @@
+:root {
+    --numBack: #252D44;;
+    --btBackgroundColor: yellowgreen;
+   
+    --btHover: rgb(129, 147, 94) ;
+
+    --displayBack:#1e0836e2;
+    --outBackGround: #1E0836;
+    --coloBackdaPagina:   #17062A;
+    --colorGeraldeLetras:  #FFE63F;
+    --backdisplayeTable:##1E0836; 
+    --colorBackDeleReset: #56077C;
+    --colorBackDeleResetHover:  #8631B0;
+    --tdBack:  #331B4D;;
+    --tdColor: black;
+    --tdHover:  #6B34AC;
+
+    --colorDeleReset: white; 
+
+    --butaoBack: #3e455a;  
+
+    --tdBorderColor:#86209D; 
+
+    --igualback:#00DECF;
+    --igualbackH: #94FFF9;
+
+}
+:root[mmm]{
+    --numBack: #252D44;;
+    --btBackgroundColor: yellowgreen;
+   
+    --btHover: rgb(129, 147, 94) ;
+
+    --displayBack:#D3CDCD;
+    --outBackGround: #D3CDCD;
+    --coloBackdaPagina:  #E6E6E6;
+    --colorGeraldeLetras:  #34342A;
+    --backdisplayeTable:#ffffff; 
+    --colorBackDeleReset:#388187;
+    --colorBackDeleResetHover: #62B5BD;
+    --tdBack:  #EAE3DB;;
+    --tdColor: black;
+    --tdHover: #FFFFFF;
+
+    --colorDeleReset: white; 
+
+    --butaoBack: #3e455a;  
+
+    --tdBorderColor:#888686; 
+
+    --igualback:#C85401;
+    --igualbackH:#FF8B38;
+}
+
+
+:root[data-segun]{
+    --numBack: #252D44;;
+    --btBackgroundColor: yellowgreen;
+    --displayBack:#181f32a0; ;
+    --btHover: rgb(129, 147, 94) ;
+    --outBackGround:rgb(41, 100, 152);
+    --coloBackdaPagina:  #3B4664;
+    --colorGeraldeLetras:  white;
+    --backdisplayeTable:#181F32; 
+    --colorDeleReset: white; 
+    --colorBackDeleReset:#647299;
+    --colorBackDeleResetHover: #8631B0; 
+    --butaoBack: #3e455a;  
+    --tdBack:  #EAE3DB;
+    --tdColor: black;
+    --tdBorderColor:#888686; 
+    --tdHover: #FFFFFF;
+    --igualback:#D13F30;
+    --igualbackH:#c55043;
+}
