@@ -1,0 +1,198 @@
+
+      @import url('https://fonts.googleapis.com/css2?family=Asar&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+      * {
+        font-family: "League Spartan", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+      }
+
+      body {
+        background-color: #3B4664;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .caixa {
+    
+        height: 75%;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      .out {
+        width: 100px;
+        border-radius: 100px;
+        height: 20px;
+        background-color: rgb(41, 100, 152);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      
+      .bt {
+        background-color: yellowgreen;
+        height: 20px;
+        width: 20px;
+        transform: scale(.8);
+        border-radius: 50%;
+        position: absolute;
+        left: 0px;
+        cursor: pointer;
+      }
+
+      .bt:hover {
+        background-color: rgb(129, 147, 94) ;
+      }
+      
+      .calc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end; /* Alinha os itens ao final */
+        width: 100%;
+   
+        padding: 05px;
+        height: fit-content;
+      }
+
+      .calc h1 {
+        font-size: 1.5rem;
+        text-transform: lowercase;
+        color: white;
+      }
+      
+      .ladinho {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+        position: relative;
+        
+        align-items: flex-end; /* Alinha os itens ao final */
+
+       
+      }
+
+      .ladinho > h2 {
+        font-size: .8rem;
+        text-transform: uppercase;
+        color: white;
+        position: relative;
+      }
+
+      .zz {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      
+      .display {
+        background-color: #181F32;
+        width: 100%;
+        height: 100px;
+        border-radius: 10px;
+        padding:0 20px;
+        display: flex;
+       
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .digitos {
+        font-size: 2rem;
+        text-align: right;
+      }
+
+      .resultado {
+       
+        text-align: right;
+      }
+     
+      .butao {
+        display: flex;
+        background-color: #3e455a;
+        flex-direction: column;
+        flex-grow: 1;
+
+        gap: 20px;
+        
+      }
+
+      
+
+      .num {
+        color: #252D44;
+      }
+      .verde {
+        background-color: #748dd2;color: white;
+      }
+
+     .verde:hover {
+      background-color: #647299;;
+      color: white;
+     }
+
+     tr > td.larg {
+      width: 48%;
+     }
+
+     
+
+      table {
+        table-layout: fixed;
+        background-color: #252D44;
+        flex-grow: 1;
+        border-collapse: separate;
+        
+        border-spacing: 10px;
+        border-radius: 10px;
+        
+        
+      }
+
+      .tbody {
+        
+      
+        
+      }
+      tr {
+        margin: 10px 0;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+        
+        
+      }
+
+      td {
+        display: flex;
+        justify-content: center;
+        background-color: #EAE3DB;
+        color: black;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 60px;
+        padding: 13px;
+        border-bottom: 4px solid #888686;
+        border-left: 2px solid #888686;
+        border-right: 2px solid #888686;
+        font-size: 15px;
+        font-weight: 700;
+        
+      }
+
+      td:hover {
+        
+        background-color: #FFFFFF;
+      }
